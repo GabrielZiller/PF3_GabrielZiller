@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova TPA</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script>
+        function calcular()
+        {
+        if(form1.nome.value == "" || form1.valor.value == "" || form1.juros.value == "" ||form1.parcelas.value == "")
+        {alert("Por favor digite algum valor em todos os campos!");}
+        
+        else
+        {
+            final = ((form1.valor.value * ((1 + form1.juros.value/100) ** form1.parcelas.value - 1)/ form1.juros.value/100) * 10000).toFixed(2)
+            alert(form1.nome.value +", se vc aplicar R$" + form1.valor.value +",00 à taxa de juros de " +form1.juros.value+"% ao mês, durante "+ form1.parcelas.value +" meses, acumulará uma poupança de R$" + final)
+        }
+        }
+        </script>
+</head>
+        <body>
+<h2>Prova</h2>
+            <form name="form1">
+
+                <div>
+                <label>Qual o seu nome?</label>
+                <input class="form-control" type="text" name="nome">
+                </div>
+                <br>
+
+                <div>
+                <label for="InputEndereço1">Qual o valor aplicado mensalmente?</label>
+                <input type="text" class="form-control" name = "valor" >
+                </div>
+                <br>
+
+                <div>
+                <label>Qual a taxa de juros?</label>
+                <input type="text" class="form-control" name = "juros">
+                </div>
+                <br>
+
+                <div>
+                <label>Qual o número de parcelas:</label>
+                <input type="text" class="form-control" name = "parcelas">
+                </div>
+                <br>
+
+                <div>
+                <input type = button value = "Calcular" class = "botao"  onmousedown="calcular()">
+                </div>
+
+            </form>  
+        </body>
+</html>

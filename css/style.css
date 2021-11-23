@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(134, 241, 143);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    margin-left: 28%;
+    margin-top: 10%;
+    justify-content: center;
+}
+
+input, select, button{
+    border-radius: 25px;
+}
+
+.botao{
+    font-size: 1.2em;
+    background: rgb(25, 0, 255);
+    margin-bottom: 1em;
+    color: white;
+    padding: 0.2em 0.6em;
+    box-shadow: white;
+    text-shadow: white;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
